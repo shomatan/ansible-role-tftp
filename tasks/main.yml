@@ -1,0 +1,9 @@
+---
+- name: Ensure tftp-server is installed.
+  yum: name={{ item }} state=installed
+  with_items:
+    - tftp-server
+    - syslinux
+
+- name: Copy tftp xinetd config in place.
+  template: src=tftp.xinetd.j2 dest=/etc/xinetd.d/tftp
