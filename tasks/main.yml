@@ -7,3 +7,6 @@
 
 - name: Copy tftp xinetd config in place.
   template: src=tftp.xinetd.j2 dest=/etc/xinetd.d/tftp
+
+- name: Ensure tftp-server is started and enabled to start at boot.
+  service: name=tftp state=started enabled=yes
