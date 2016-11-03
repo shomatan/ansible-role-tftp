@@ -8,7 +8,7 @@ None.
 None.
 
 ## Dependencies
-None.
++ [xinetd](https://github.com/shomatan/ansible-xinetd.git)
 
 ```yaml
 - hosts: all
