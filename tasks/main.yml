@@ -1,9 +1,10 @@
 ---
-- name: Ensure tftp-server is installed.
-  yum: name={{ item }} state=installed
-  with_items:
-    - tftp-server
-    - syslinux
+# install
+- include: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
 
-- name: Copy tftp xinetd config in place.
-  template: src=tftp.xinetd.j2 dest=/etc/xinetd.d/tftp
+- include: setup-Ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include: setup-Debian.yml
+  when: ansible_distribution == 'Debian'
