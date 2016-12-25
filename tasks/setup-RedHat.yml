@@ -7,7 +7,8 @@
 
 - name: RedHat | Copy tftp xinetd config in place.
   template: src=tftp.xinetd.j2 dest=/etc/xinetd.d/tftp
-
+  notify: restart xinetd
+  
 # service
-- name: RedHat | Ensure tftp is started and enabled to start at boot.
-  service: name=tftp state=started enabled=yes
+# - name: RedHat | Ensure tftp is started and enabled to start at boot.
+#   service: name=tftp state=started enabled=yes
