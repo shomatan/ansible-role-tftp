@@ -10,6 +10,7 @@ None.
 ## Dependencies
 + [xinetd](https://github.com/shomatan/ansible-xinetd.git)
 
+## Example playbook
 ```yaml
 - hosts: all
   roles:
