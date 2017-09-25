@@ -1,18 +1,38 @@
-# Ansible role: tftp
-Installs and configures TFTP server.
+Ansible Role: TFTP Server
+=========
 
-## Requirements
+Installs and configures Trivial File Transfer Protocol server.
+
+Requirements
+------------
+
 None.
 
-## Role Variables
+Role Variables
+--------------
+
 None.
 
-## Dependencies
-+ [xinetd](https://github.com/shomatan/ansible-xinetd.git)
+Dependencies
+------------
 
-## Example playbook
+- [xinetd](https://github.com/shomatan/ansible-role-xinetd.git)
+
+Example Playbook
+----------------
+
 ```yaml
 - hosts: all
   roles:
-    - { role: tftp }
+    - { role: shomatan.tftp }
 ```
+
+License
+-------
+
+BSD
+
+Author Information
+------------------
+
+Shoma Nishitateno (shoma416@gmail.com)
